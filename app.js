@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
     res.locals.title='Landing Page';
     res.render('landing')
   })
+app.get('/home', (req, res) => {
+    res.locals.title='Home Page';
+    res.render('pages/home')
+})
 
 
 app.use(express.static(path.join(__dirname, 'public')))
